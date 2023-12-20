@@ -1,5 +1,6 @@
 package med.vol.api.servicos;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,4 +35,11 @@ public class MedicoService {
 		medicoRepository.deleteById(id);
 	}
 	
+	public Medico validaAtivo(Long id) {
+		return medicoRepository.validaAtivo(id);
+	}
+	
+	public Medico validaAgendaDiaEHora(Long id, LocalDateTime data) {
+		return medicoRepository.validaAgendaDiaEHora(id, data);
+	}
 }

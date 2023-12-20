@@ -29,7 +29,6 @@ import med.vol.api.servicos.MedicoService;
 
 @RestController
 @RequestMapping("medicos")
-
 public class MedicoController {
 	@Autowired
 	private MedicoService medicoService;
